@@ -34,7 +34,7 @@ setParams () {
 							iw dev $MESH_IFACE set mesh_param $usr_param
 
 							# Log the change to system log
-							logger -t "smwd" -p "daemon.info" "Setting: $usr_param"
+							logger -t "smwd" -p "daemon.info" "Setting: $usr_param on $MESH_IFACE"
 						fi
 
                 fi
@@ -74,13 +74,17 @@ while true; do
 
 			# Check for phantoms
 			removePhantoms
+
 		else
+
 			# If mesh-iface is still down
 			logger -t "smwd" -p "daemon.err" "All interfaces are down, waiting 1 minute"
 			sleep 60
+
 		fi
 
-		# Wait 20 seconds
+		# Wait 10 seconds
 		sleep 10
+
 	done
 done
