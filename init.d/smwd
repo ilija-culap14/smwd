@@ -1,0 +1,13 @@
+#!/bin/sh /etc/rc.common
+# mesh-wd init.d script
+
+START=20
+STOP=15
+
+start() {
+	/usr/local/smwd.sh &
+}
+
+stop() {
+	kill $(pidof smwd.sh)
+}
