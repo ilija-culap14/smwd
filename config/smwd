@@ -1,12 +1,12 @@
 # RSSI Treshold, rootmode and max peer links
 mesh_rssi_threshold -80
 mesh_hwmp_rootmode 4
-mesh_max_peer_links 10
+mesh_max_peer_links 25
 
 # Mesh forwarding
 mesh_fwding 1
 
 # Node role
-mesh_connected_to_gate 1 
-mesh_connected_to_as 1
+mesh_connected_to_gate 0
+mesh_connected_to_as 0
 mesh_gate_announcements 1
